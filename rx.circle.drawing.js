@@ -59,6 +59,17 @@ var drawLine = ([x0, y0, x1, y1, strokeStyle = 'red']) => {
   ctx.stroke()
 }
 
+var drawCircle = ([x, y, r, strokeStyle = 'pink']) => {
+  //开始一个新的绘制路径
+  ctx.beginPath();
+  //设置弧线的颜色
+  ctx.strokeStyle = strokeStyle;
+  //沿着坐标点(x, y)为圆心、半径为r的圆的顺时针方向绘制弧线
+  ctx.arc(x, y, r, 0, Math.PI / 2, false);    
+  //按照指定的路径绘制弧线
+  ctx.stroke();
+}
+
 var finish = () => {
   button.style.display = 'block'
 }
